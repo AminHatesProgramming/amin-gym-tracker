@@ -1,4 +1,4 @@
-const CACHE_NAME='amino-v4';
+const CACHE_NAME='amino-v5';
 const APP_SHELL=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./chick-mascot.jpg'];
 
 self.addEventListener('install',event=>{
