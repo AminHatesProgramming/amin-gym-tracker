@@ -1,7 +1,7 @@
 {
-  "name": "Amin Gym Tracker",
-  "short_name": "Amin Fit",
-  "description": "برنامه شخصی ثبت تمرین، وزنه و سابقه باشگاه امین",
+  "name": "Amino",
+  "short_name": "Amino",
+  "description": "ثبت هوشمند برنامه تمرین، وزنه، تکرار و سابقه باشگاه",
   "lang": "fa",
   "dir": "rtl",
   "id": "./",
@@ -9,8 +9,8 @@
   "scope": "./",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
-  "background_color": "#070b14",
-  "theme_color": "#0b1020",
+  "background_color": "#070b0e",
+  "theme_color": "#08100f",
   "icons": [
     {
       "src": "icon-192.png",
