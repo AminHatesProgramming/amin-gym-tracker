@@ -82,7 +82,7 @@ window.startTimer=(s,t)=>{clearInterval(intv);seconds=s;paused=false;$('#timer')
 function tick(){let m=Math.floor(Math.max(0,seconds)/60),s=Math.max(0,seconds)%60;$('#clock').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
 $('#plus30').onclick=()=>{seconds+=30;tick()};$('#pauseBtn').onclick=()=>{paused=!paused;$('#pauseBtn').textContent=paused?'ادامه':'توقف'};$('#closeTimer').onclick=()=>{clearInterval(intv);$('#timer').classList.remove('show')}
 $('#exportBtn').onclick=()=>{let b=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='amin-gym-backup.json';a.click();URL.revokeObjectURL(a.href)}
-$('#importFile').onchange=async e=>{try{state=JSON.parse(await e.target.files[0].text());save();renderHome();renderHistory();toast('اطلاعات بازیابی شد')}catch{alert('فایل معتبر نیست')}}
+$('#importFile').onchange=async e=>{try{let imported=JSON.parse(await e.target.files[0].text());if(!imported||typeof imported!=='object'||!imported.active||typeof imported.active!=='object'||!Array.isArray(imported.history))throw new Error('invalid backup');state=imported;current=state.selected||null;save();renderHome();renderHistory();if(current)renderWorkout();toast(`اطلاعات بازیابی شد (${state.history.length} جلسه)`)}catch{alert('فایل پشتیبان معتبر نیست')}finally{e.target.value=''}}
 $('#resetBtn').onclick=()=>{if(confirm('همه اطلاعات حذف شوند؟')){state={active:{},history:[],selected:null};save();location.reload()}}
 let deferredInstallPrompt=null;
 const isStandalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
