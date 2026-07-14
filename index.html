@@ -41,6 +41,7 @@ header{position:sticky;top:0;z-index:20;margin:-14px -14px 0;padding:calc(12px +
 .installbox{margin-bottom:18px;padding:15px;border:1px solid rgba(44,224,193,.18);border-radius:18px;background:linear-gradient(135deg,rgba(44,224,193,.08),rgba(255,255,255,.02))}.installbox h3{margin:0 0 7px}.installbox p{margin:0 0 12px;color:var(--muted);font-size:11px;line-height:1.9}.installstate{display:inline-block;margin-right:9px;color:#9af0d4;font-size:11px}.divider{height:1px;background:var(--line);margin:18px 0}
 @media(max-width:680px){.grid{grid-template-columns:1fr}.week{grid-template-columns:repeat(4,1fr)}.brandbar{grid-template-columns:52px 1fr 52px}.app-logo,.mascot-frame{width:52px;height:52px;border-radius:17px}.set{grid-template-columns:42px minmax(0,1fr) minmax(0,1fr) 38px}.hero-intro{grid-template-columns:minmax(0,1fr) 104px}.total-sessions{min-height:88px}.total-sessions b{font-size:25px}.hero-stats{gap:6px}.hero-stat{padding:10px 4px}.week-progress-card{grid-template-columns:1fr 60px}.main-day-dots{gap:4px}.week-record{grid-template-columns:54px 1fr 42px}}
 @media(max-width:370px){.app{padding-left:10px;padding-right:10px}.nav button{font-size:10px}.set{gap:5px;padding:6px}.set input::placeholder{font-size:9px}.brand-title h1{font-size:22px}}
+.exercise-media{margin:0 0 12px}.media-loading,.media-empty{display:grid;place-items:center;min-height:76px;padding:13px;border:1px dashed rgba(44,224,193,.22);border-radius:13px;background:rgba(3,16,18,.42);color:#8da3a0;text-align:center;line-height:1.9}.media-visual{display:block;width:100%;max-height:370px;object-fit:contain;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:#fff}.media-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;color:#728a86;font-size:9px}.media-source{color:#82dbc8;text-decoration:none;border-bottom:1px dashed rgba(130,219,200,.35)}.media-source:hover{color:#b3f5e8}.media-error{color:#ffb6ba;border-color:rgba(255,114,121,.22)}
 </style>
 </head>
 <body>
@@ -70,6 +71,7 @@ header{position:sticky;top:0;z-index:20;margin:-14px -14px 0;padding:calc(12px +
 <section id="settings" class="view"><div class="panel"><h2 style="margin-top:0">نصب و پشتیبان</h2><div class="installbox"><h3>نصب Amino روی گوشی</h3><p id="installHelp">برنامه را از آدرس امن باز کن و «نصب برنامه» را بزن تا آیکون Amino روی صفحه اصلی گوشی قرار بگیرد.</p><button class="primary" id="installBtn">نصب برنامه</button><span id="installState" class="installstate" aria-live="polite"></span></div><div class="divider"></div><h3>پشتیبان اطلاعات</h3><p style="color:var(--muted);line-height:1.9;font-size:11px">برای نگه‌داشتن وزنه‌ها و سوابق یا انتقال آن‌ها به گوشی دیگر، فایل پشتیبان بگیر.</p><div class="actions"><button class="primary" id="exportBtn">خروجی JSON</button><label class="ghost">ورود فایل<input id="importFile" type="file" accept=".json" hidden></label><button class="danger" id="resetBtn">حذف همه اطلاعات</button></div></div></section>
 </div>
 <div id="timer" class="timer"><div id="clock" class="clock">00:00</div><div class="grow"><b id="timerTitle">استراحت</b></div><button id="plus30">+۳۰</button><button id="pauseBtn">توقف</button><button id="closeTimer">×</button></div>
+<script src="./media-manifest.js"></script>
 <script>
 const WORKOUTS=[
   {id:'sat',day:'شنبه',title:'اختیاری C: جلوران سنگین',accent:'#f4c65a',optional:true,subtitle:'چهارسر، ساق، خارج ران و شکم',adjustment:'اگر این جلسه را انجام دادی، سه‌شنبه پرس پا را ۳ ست به‌جای ۴ و جلوپا را ۲ ست به‌جای ۳ انجام بده.',warmup:['۵ تا ۷ دقیقه هوازی سبک','۲ ست سبک و افزایشی برای حرکت اول','مچ پا، زانو و لگن را در دامنه بدون درد آماده کن'],exercises:[
@@ -201,6 +203,15 @@ const EXECUTION_TIPS={
 };
 const FACE_PULL_EXERCISE={id:'fri_facepull',name:'فیس‌پول طناب',sets:2,reps:'15-20',rest:60,restText:'۶۰ ثانیه',tip:'طناب را سمت پیشانی بکش، دست‌ها کنار گوش باز شوند و شانه‌ها پایین بمانند.'};
 const Y_RAISE_EXERCISE={id:'fri_yraise',name:'نشر Y سیمکش',sets:2,reps:'12-15',rest:60,restText:'۶۰ ثانیه',tip:'با وزنه سبک، دست‌ها را در مسیر Y بالا ببر و بدون بالاانداختن شانه‌ها پایین بیاور.'};
+const EXERCISE_MEDIA_KEYS={
+  sat_1:'hack-or-pendulum-squat',sat_2:'bulgarian-split-squat',sat_3:'leg-extension',sat_4:'standing-calf-raise',sat_5:'machine-hip-abduction',sat_6:'reverse-crunch',
+  sun_1:'incline-dumbbell-press',sun_2:'lying-machine-chest-press',sun_3:'seated-machine-chest-press',sun_4:'pec-deck-fly',sun_5:'high-to-low-cable-crossover',sun_6:'chest-supported-h-row',sun_7:'machine-triceps-dip',sun_8:'overhead-rope-triceps-extension',
+  mon_1:'neutral-grip-lat-pulldown',mon_2:'chest-supported-t-bar-row',mon_3:'behind-body-cable-curl',mon_4:'rope-hammer-curl',mon_5:'dumbbell-farmer-carry',
+  tue_1:'machine-shoulder-press',tue_2:'leg-press',tue_3:'machine-lateral-raise',tue_4:'leg-extension',tue_5:'incline-machine-chest-press',tue_6:'seated-calf-raise',tue_7:'dumbbell-hammer-curl',tue_8:'wrist-curl',tue_9:'reverse-wrist-curl',tue_10:'reverse-crunch',tue_11:'cable-pallof-press',
+  wed_1:'machine-hip-adduction',wed_2:'machine-hip-abduction',wed_3:'standing-calf-raise',wed_4:'tibialis-raise',wed_5:'dumbbell-suitcase-carry',wed_6:'reverse-crunch',
+  thu_1:'smith-romanian-deadlift',thu_2:'lying-leg-curl',thu_3:'machine-hip-thrust',thu_4:'seated-calf-raise',thu_5:'single-arm-overhead-cable-triceps-extension',thu_6:'straight-bar-triceps-pushdown',thu_7:'cable-crunch',thu_8:'high-to-low-cable-woodchopper',
+  fri_1:'front-lat-pulldown',fri_2:'chest-supported-h-row',fri_3:'straight-arm-cable-pulldown',fri_4:'reverse-pec-deck',fri_5:'single-arm-cable-lateral-raise',fri_facepull:'rope-face-pull',fri_yraise:'cable-y-raise',fri_7:'machine-preacher-curl',fri_8:'incline-dumbbell-curl',fri_9:'reverse-curl',fri_10:'wall-chin-tuck'
+};
 const KEY='aminGymTrackerV1',PROGRAM_VERSION=3,ROTATION_ANCHOR=new Date(2026,6,11);
 function blankState(history=[]){return{version:PROGRAM_VERSION,active:{},history,selected:null}}
 function normalizeState(value){
@@ -251,7 +262,37 @@ function renderWorkout(){
   bind(w,s);progress(w,s);
 }
 function safeText(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function guideHtml(e){const tip=EXECUTION_TIPS[e.id]||e.tip;return `<div class="guide-body"><p class="move-tip">${tip}</p><div class="guide-rule"><b>قانون مشترک همه حرکات:</b> ${COMMON_EXECUTION_RULE}</div></div>`}
+function guideHtml(e){
+  const tip=EXECUTION_TIPS[e.id]||e.tip,mediaKey=EXERCISE_MEDIA_KEYS[e.id]||'';
+  return `<div class="guide-body"><div class="exercise-media" data-media-key="${safeText(mediaKey)}" data-media-name="${safeText(e.name)}"><div class="media-loading">راهنمای تصویری با بازشدن این بخش بارگذاری می‌شود…</div></div><p class="move-tip">${tip}</p><div class="guide-rule"><b>قانون مشترک همه حرکات:</b> ${COMMON_EXECUTION_RULE}</div></div>`;
+}
+function loadExerciseMedia(shell){
+  shell.dataset.loaded='1';
+  const key=shell.dataset.mediaKey,entry=(window.EXERCISE_MEDIA||{})[key];
+  if(!entry||entry.status!=='ready'||!entry.file){
+    shell.innerHTML='<div class="media-empty">برای این حرکت فعلاً رسانه‌ی دقیق و قابل‌اعتماد پیدا نشد؛ توضیح اجرای زیر را دنبال کن.</div>';
+    return;
+  }
+  const loading=shell.querySelector('.media-loading')||document.createElement('div'),img=document.createElement('img');
+  loading.className='media-loading';loading.textContent='در حال بارگذاری راهنمای تصویری…';shell.replaceChildren(loading);
+  img.className='media-visual';img.alt='راهنمای تصویری '+(shell.dataset.mediaName||'حرکت');img.decoding='async';
+  img.onload=()=>{
+    const meta=document.createElement('div'),label=document.createElement('span');
+    meta.className='media-meta';label.textContent='راهنمای تصویری اجرای حرکت';meta.append(label);
+    if(entry.sourceName&&entry.sourcePage){
+      const link=document.createElement('a');link.className='media-source';link.href=entry.sourcePage;link.target='_blank';link.rel='noopener noreferrer';link.textContent='منبع: '+entry.sourceName;meta.append(link);
+    }
+    loading.replaceWith(img);shell.append(meta);
+  };
+  img.onerror=()=>{loading.className='media-empty media-error';loading.textContent='راهنمای تصویری بارگذاری نشد؛ توضیح اجرای زیر همچنان در دسترس است.'};
+  img.src=entry.file;
+}
+function bindGuideMedia(){
+  $$('.guide').forEach(details=>details.ontoggle=()=>{
+    if(!details.open){details.querySelectorAll('video').forEach(video=>video.pause());return}
+    const shell=details.querySelector('[data-media-key]');if(shell&&!shell.dataset.loaded)loadExerciseMedia(shell);
+  });
+}
 function card(w,s,e,i){
   const d=s.exercises[e.id],p=latest(w.id,e.id),timerTitle=JSON.stringify(e.name).replace(/'/g,'&#39;');
   return `<div class="ex"><div class="exh"><div><div class="ex-index">حرکت ${faNum(i+1)}</div><h3>${e.name}</h3><div class="pills"><span class="pill">${faNum(e.sets)} ست</span><span class="pill">${repLabel(e)}</span><span class="pill">استراحت ${formatRest(e)}</span>${e.bodyweight?'<span class="pill">وزن بدن</span>':''}</div></div><button class="timerbtn" aria-label="شروع تایمر" onclick='startTimer(${e.rest},${timerTitle})'>⏱</button></div><div class="prev" style="${p?'display:block':''}">${p?'جلسه قبل: '+p.sets.map((x,j)=>`ست ${faNum(j+1)}: ${safeText(x.weight)||'—'} × ${safeText(x.reps)||'—'}`).join(' | '):''}</div>${e.bodyweight?'<div class="bodyweight-note">برای این حرکت وزنه اختیاری است؛ فقط با ثبت تکرار، ست خودکار کامل می‌شود.</div>':''}<div class="sets">${d.sets.map((x,j)=>`<div class="set"><span>ست ${faNum(j+1)}</span><input aria-label="وزنه ست ${j+1}" type="number" step="0.5" inputmode="decimal" placeholder="${e.bodyweight?'وزن بدن':'وزنه'}" data-e="${e.id}" data-i="${j}" data-k="weight" value="${safeText(x.weight)}"><input aria-label="تکرار ست ${j+1}" type="number" step="1" inputmode="numeric" placeholder="تکرار" data-e="${e.id}" data-i="${j}" data-k="reps" value="${safeText(x.reps)}"><span class="doneMark ${x.done?'complete':''}" data-done="${e.id}-${j}" aria-label="وضعیت تکمیل">✓</span></div>`).join('')}</div><div id="r_${e.id}" class="ready">همه ست‌ها به سقف بازه رسیدند؛ جلسه بعد افزایش کوچک وزنه منطقی است.</div><textarea class="note" data-note="${e.id}" placeholder="یادداشت حرکت...">${safeText(d.note||'')}</textarea><details class="guide"><summary><span class="guide-icon">i</span><span>نکته اجرای حرکت</span><span class="guide-chevron">⌄</span></summary>${guideHtml(e)}</details></div>`;
@@ -263,6 +304,7 @@ function bind(w,s){
   $$('[data-note]').forEach(el=>el.oninput=()=>{s.exercises[el.dataset.note].note=el.value;save()});
   $('#sessionNote').oninput=e=>{s.sessionNote=e.target.value;save()};
   w.exercises.forEach(e=>updateReady(w,s,e.id));
+  bindGuideMedia();
 }
 function updateReady(w,s,eid){const ex=w.exercises.find(x=>x.id===eid),ok=s.exercises[eid].sets.every(x=>x.done&&+x.reps>=repMax(ex.reps)&&(ex.bodyweight||x.weight!==''));const el=$('#r_'+eid);if(el)el.style.display=ok?'block':'none'}
 function progress(w,s){const all=w.exercises.flatMap(e=>s.exercises[e.id].sets),done=all.filter(x=>x.done).length,pct=all.length?Math.round(done/all.length*100):0;$('#bar').style.width=pct+'%';$('#pct').textContent=faNum(pct)+'٪ انجام شده';$('#cnt').textContent=faNum(done)+' از '+faNum(all.length)+' ست'}

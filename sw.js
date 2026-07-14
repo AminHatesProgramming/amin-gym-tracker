@@ -1,5 +1,5 @@
-const CACHE_NAME='amino-v5';
-const APP_SHELL=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./chick-mascot.jpg'];
+const CACHE_NAME='amino-v6';
+const APP_SHELL=['./','./index.html','./manifest.webmanifest','./media-manifest.js','./icon-192.png','./icon-512.png','./chick-mascot.jpg'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting()));
