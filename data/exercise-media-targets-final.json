@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 2,
+  "policy": {
+    "priority": [
+      "Fitamin",
+      "Badankhooba",
+      "reputable exact fallback"
+    ],
+    "mustBeExactVariation": true,
+    "downloadLocalForOffline": true,
+    "hotlinkAllowedOnlyIfDownloadBlocked": true,
+    "sourceCreditRequired": true,
+    "noApproximateSubstitutions": true,
+    "manualVisualReviewRequired": true
+  },
+  "items": [
+    {
+      "guideId": "wall-slide",
+      "expectedMovement": "wall slide, standing against wall",
+      "sourceName": "YouTube exact fallback",
+      "sourcePage": "https://www.youtube.com/watch?v=o0xx5gypKZc",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "cable-external-rotation",
+      "expectedMovement": "single-arm cable shoulder external rotation, elbow by side",
+      "sourceName": "YouTube exact fallback",
+      "sourcePage": "https://www.youtube.com/watch?v=PVdgjHqAes8",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "cable-serratus-punch",
+      "expectedMovement": "single-arm cable serratus punch",
+      "sourceName": "YouTube exact fallback",
+      "sourcePage": "https://www.youtube.com/watch?v=LfgQfO2KNos",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "hip-hinge-drill",
+      "expectedMovement": "bodyweight hip hinge drill",
+      "sourceName": "YouTube search target",
+      "sourcePage": "https://www.youtube.com/results?search_query=bodyweight+hip+hinge+drill",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "exactnessNote": "Codex must choose a short exact hip-hinge drill; do not use squat or good-morning tutorial."
+    },
+    {
+      "guideId": "incline-dumbbell-press",
+      "expectedMovement": "dumbbell incline bench press",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/dumbbell-incline-bench-press/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "lying-machine-chest-press",
+      "expectedMovement": "lying leverage chest press",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-lying-chest-press/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/d0b33e754f4a9b1cbc1b0e02cefabee138976631-1080p.mp4"
+    },
+    {
+      "guideId": "forward-machine-chest-press",
+      "expectedMovement": "the exact seated/forward machine used in the live app",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-decline-chest-press/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "exactnessNote": "This source is acceptable only if the live machine's handles travel forward/down like a decline lever press. Otherwise preserve the current live exact video or find an exact seated horizontal machine chest press. Never label an incline or lying press as this movement.",
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/9cd63e721fce9f5632702124a049246538977018-1080p.mp4"
+    },
+    {
+      "guideId": "pec-deck-fly",
+      "expectedMovement": "lever seated chest fly / pec deck",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-fly-chest/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/0a46e6a049ae901608c08f420817900338977069-1080p.mp4"
+    },
+    {
+      "guideId": "high-to-low-cable-crossover",
+      "expectedMovement": "standing dual-cable crossover from high to low",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-cross-over/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "exactnessNote": "Confirm pulleys start high and hands finish in front of lower chest/upper abdomen.",
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/11/Cable-Crossover.mp4"
+    },
+    {
+      "guideId": "chest-supported-h-row",
+      "expectedMovement": "lever seated H row with chest support",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-row-h/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "machine-triceps-dip",
+      "expectedMovement": "lever seated triceps dip, upright torso",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-dip/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "overhead-rope-triceps-extension",
+      "expectedMovement": "standing cable overhead triceps extension with rope, facing away",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-overhead-triceps-extension-rope-attachment/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "machine-shoulder-press",
+      "expectedMovement": "plate-loaded or selectorized shoulder press machine",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-military-press-plate-loaded/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/10/Lever-Shoulder-Press-Plate-Loaded.mp4"
+    },
+    {
+      "guideId": "seated-leg-press",
+      "expectedMovement": "seated/horizontal leg press",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-leg-press/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/27ab2a3154e38e7bff995c41b7035c4939097977-1080p.mp4"
+    },
+    {
+      "guideId": "machine-lateral-raise",
+      "expectedMovement": "lever/machine lateral raise",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-lateral-raise-plate-loaded/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "leg-extension",
+      "expectedMovement": "lever leg extension",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-leg-extension/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "incline-machine-chest-press",
+      "expectedMovement": "lever incline chest press",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-incline-chest-press/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/86f318605eaaa9ff1af4a69015b9aea238976907-1080p.mp4"
+    },
+    {
+      "guideId": "dumbbell-hammer-curl",
+      "expectedMovement": "standing dumbbell hammer curl",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/dumbbell-hammer-curl/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "cable-wrist-curl",
+      "expectedMovement": "seated cable wrist curl, palms up, forearms supported",
+      "sourceName": "Muscle & Strength exact fallback",
+      "sourcePage": "https://cdn.muscleandstrength.com/exercises/seated-cable-wrist-curl.html",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://www.atletiq.com/en/exercises/388",
+      "exactnessNote": "Reject any elbow-flexion/reverse-curl video; only the wrist must move."
+    },
+    {
+      "guideId": "cable-reverse-wrist-curl",
+      "expectedMovement": "cable reverse wrist curl, palms down, forearms supported",
+      "sourceName": "Weight Training Guide exact fallback",
+      "sourcePage": "https://weighttraining.guide/exercises/cable-reverse-wrist-curl/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://fitwill.app/exercise/0210/cable-reverse-wrist-curl/video/",
+      "exactnessNote": "Reject Badankhooba 'forearms reverse cable curl' because its described motion bends the elbow rather than isolating wrist extension."
+    },
+    {
+      "guideId": "reverse-crunch",
+      "expectedMovement": "reverse crunch on floor/bench",
+      "sourceName": "Physitrack exact fallback",
+      "sourcePage": "https://www.physitrack.com/exercise-library/how-to-perform-the-reverse-crunch-exercise",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "cable-pallof-press",
+      "expectedMovement": "horizontal cable Pallof press",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-horizontal-pallof-press/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "dumbbell-rdl",
+      "expectedMovement": "dumbbell Romanian deadlift",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/dumbbell-romanian-deadlift/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "lying-leg-curl",
+      "expectedMovement": "lever lying leg curl",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-lying-leg-curl/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/f622b1400700bf8720cea6d9af67223139126539-1080p.mp4"
+    },
+    {
+      "guideId": "cable-pull-through",
+      "expectedMovement": "rope cable pull-through",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-pull-through/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "seated-calf-raise",
+      "expectedMovement": "lever seated calf raise",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-calf-raise/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/bdba1d88f8593f746bcffaba0c32ffe639145681-1080p.mp4"
+    },
+    {
+      "guideId": "single-arm-overhead-cable-triceps",
+      "expectedMovement": "single-arm low-cable overhead triceps extension with D handle",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/low-cable-overhead-triceps-extension/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "exactnessNote": "The published clip must visibly be single-arm with a cable D handle. If the page video is bilateral, find an exact single-arm cable fallback; do not use a dumbbell or resistance band clip."
+    },
+    {
+      "guideId": "straight-bar-triceps-pushdown",
+      "expectedMovement": "overhand straight-bar cable triceps pushdown",
+      "sourceName": "Vimeo exact fallback",
+      "sourcePage": "https://vimeo.com/827826586",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://vimeo.com/1072222688",
+      "exactnessNote": "Use overhand grip, short straight bar. Reject reverse-grip, rope, V-bar or EZ-bar clips."
+    },
+    {
+      "guideId": "cable-kneeling-crunch",
+      "expectedMovement": "kneeling cable crunch with rope",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-kneeling-crunch/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "high-to-low-cable-woodchopper",
+      "expectedMovement": "cable twist/woodchopper from high to low",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-twist-up-down/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "front-lat-pulldown",
+      "expectedMovement": "front lat pulldown with medium overhand grip",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-bar-lateral-pulldown/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "straight-arm-rope-pulldown",
+      "expectedMovement": "straight-arm lat pulldown/pullover using rope",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-lat-pushdown-rope-equipment/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://badankhooba.com/exercise-guides/cable-straight-arm-pulldown/",
+      "exactnessNote": "Use rope version; reject bent-arm triceps pushdown."
+    },
+    {
+      "guideId": "single-arm-cable-lateral-raise",
+      "expectedMovement": "single-arm low-cable lateral raise",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/single-arm-cable-lateral-raise/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2024/04/920-نشر-از-جانب-سیمکش-از-جلو.mp4"
+    },
+    {
+      "guideId": "reverse-pec-deck",
+      "expectedMovement": "reverse pec deck / lever seated reverse fly",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-reverse-fly-parallel-grip/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "cable-face-pull",
+      "expectedMovement": "rope cable face pull to face with external rotation",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/cable-rope-face-pull/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "cable-y-raise",
+      "expectedMovement": "bilateral cable Y raise from low pulleys",
+      "sourceName": "Weight Training Guide exact fallback",
+      "sourcePage": "https://weighttraining.guide/exercises/cable-y-raise/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://www.youtube.com/watch?v=T9GI6UERhL4"
+    },
+    {
+      "guideId": "machine-preacher-curl",
+      "expectedMovement": "machine preacher curl",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/machine-preacher-curl/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://badankhooba.com/exercise-guides/lever-preacher-curl/"
+    },
+    {
+      "guideId": "alternating-dumbbell-curl",
+      "expectedMovement": "standing alternating dumbbell biceps curl",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/dumbbell-standing-alternate-biceps-curl/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "exactnessNote": "Do not substitute a seated clip unless the app exercise name is also changed to seated."
+    },
+    {
+      "guideId": "reverse-cable-curl",
+      "expectedMovement": "standing reverse-grip cable curl with straight bar",
+      "sourceName": "بدن‌خوبا",
+      "sourcePage": "https://badankhooba.com/exercise-guides/standing-biceps-reverse-wide-grip-cable-curl/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "exactnessNote": "Confirm grip/straight-bar variant matches app; avoid wrist-only reverse curl.",
+      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/10/Standing-Bicep-Reverse-Wide-Grip-Cable-Curl.mp4"
+    },
+    {
+      "guideId": "wall-chin-tuck",
+      "expectedMovement": "standing wall chin tuck, head glides straight back",
+      "sourceName": "Newton Wellness exact fallback",
+      "sourcePage": "https://www.newtonwellnesscenter.com/exercise-videos-neck/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "fallbackSourcePage": "https://physiowinnipeg.com/exercise-library/",
+      "exactnessNote": "Reject neck flexion/nodding video; must show horizontal head retraction against/near wall."
+    }
+  ]
+}

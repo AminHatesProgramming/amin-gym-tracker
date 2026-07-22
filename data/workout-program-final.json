@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 4,
+  "programVersion": "2026-07-20-final-live-handoff",
+  "rules": {
+    "optionalDaysCountTowardProgram": false,
+    "facePullAndYRaiseAlternate": false,
+    "sundayHasDirectShoulderWork": false,
+    "defaultRir": "۱ تا ۲ تکرار ذخیره",
+    "restDays": [
+      "sat",
+      "mon",
+      "wed"
+    ]
+  },
+  "days": [
+    {
+      "id": "sat",
+      "dayFa": "شنبه",
+      "type": "rest",
+      "title": "استراحت و ریکاوری",
+      "note": "فعالیت اختیاری: پیاده‌روی سبک یا کشش کوتاه. انجام‌ندادن این بخش هیچ خللی در برنامه اصلی ایجاد نمی‌کند."
+    },
+    {
+      "id": "sun",
+      "dayFa": "یکشنبه",
+      "type": "training",
+      "title": "سینه + پشت‌بازو",
+      "subtitle": "سینه کامل، تعادل پاسچر و پوشش پشت‌بازو؛ بدون حرکت مستقیم سرشانه",
+      "estimatedMinutes": "۸۵ تا ۱۰۵ دقیقه",
+      "totalWorkingSets": 20,
+      "warmup": [
+        {
+          "id": "warm-light-cardio",
+          "name": "هوازی سبک",
+          "dose": "۵ تا ۷ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-wall-slide-sun",
+          "name": "وال‌اسلاید",
+          "dose": "۱ ست × ۱۰ تکرار",
+          "guideId": "wall-slide",
+          "mediaRequired": true
+        },
+        {
+          "id": "warm-external-rotation-sun",
+          "name": "چرخش خارجی شانه با سیمکش",
+          "dose": "۱ ست × ۱۲ هر دست",
+          "attachment": "دسته D تک‌دست؛ وزنه بسیار سبک",
+          "guideId": "cable-external-rotation",
+          "mediaRequired": true
+        },
+        {
+          "id": "warm-serratus-punch",
+          "name": "پانچ سراتوس سیمکش",
+          "dose": "۱ ست × ۱۲ هر دست",
+          "attachment": "دسته D تک‌دست",
+          "guideId": "cable-serratus-punch",
+          "mediaRequired": true
+        },
+        {
+          "id": "warm-ramp-incline-db",
+          "name": "ست افزایشی پرس بالاسینه",
+          "dose": "۲ تا ۳ ست سبک و افزایشی",
+          "guideId": "incline-dumbbell-press",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "sun-01",
+          "order": 1,
+          "name": "پرس بالاسینه دمبل",
+          "sets": 3,
+          "reps": "۶–۱۰",
+          "restSec": "۱۲۰–۱۵۰",
+          "guideId": "incline-dumbbell-press"
+        },
+        {
+          "id": "sun-02",
+          "order": 2,
+          "name": "پرس سینه دستگاه خوابیده",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰",
+          "guideId": "lying-machine-chest-press"
+        },
+        {
+          "id": "sun-03",
+          "order": 3,
+          "name": "پرس سینه دستگاه روبه‌جلو",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰–۱۲۰",
+          "guideId": "forward-machine-chest-press"
+        },
+        {
+          "id": "sun-04",
+          "order": 4,
+          "name": "فلای سینه دستگاه معمولی",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۷۵–۹۰",
+          "guideId": "pec-deck-fly"
+        },
+        {
+          "id": "sun-05",
+          "order": 5,
+          "name": "کراس‌اور سیمکش از بالا به پایین",
+          "sets": 2,
+          "reps": "۱۲–۱۵",
+          "restSec": "۶۰–۷۵",
+          "attachment": "دو دسته D",
+          "guideId": "high-to-low-cable-crossover"
+        },
+        {
+          "id": "sun-06",
+          "order": 6,
+          "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰",
+          "guideId": "chest-supported-h-row"
+        },
+        {
+          "id": "sun-07",
+          "order": 7,
+          "name": "دیپ پشت‌بازو دستگاه",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰",
+          "guideId": "machine-triceps-dip"
+        },
+        {
+          "id": "sun-08",
+          "order": 8,
+          "name": "پشت‌بازو طناب بالای سر، پشت به سیمکش",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۷۵–۹۰",
+          "attachment": "طناب",
+          "guideId": "overhead-rope-triceps-extension"
+        }
+      ]
+    },
+    {
+      "id": "mon",
+      "dayFa": "دوشنبه",
+      "type": "rest",
+      "title": "استراحت و ریکاوری",
+      "note": "فعالیت اختیاری: پیاده‌روی سبک یا کشش کوتاه. انجام‌ندادن این بخش هیچ خللی در برنامه اصلی ایجاد نمی‌کند."
+    },
+    {
+      "id": "tue",
+      "dayFa": "سه‌شنبه",
+      "type": "training",
+      "title": "سرشانه + جلوران + سینه مکمل + جلو بازو مکمل + ساعد + شکم",
+      "estimatedMinutes": "۹۰ تا ۱۰۵ دقیقه",
+      "totalWorkingSets": 28,
+      "warmup": [
+        {
+          "id": "warm-cardio-tue",
+          "name": "هوازی سبک",
+          "dose": "۵ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-shoulder-press",
+          "name": "پرس سرشانه سبک",
+          "dose": "۱ تا ۲ ست افزایشی",
+          "guideId": "machine-shoulder-press",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-leg-press",
+          "name": "پرس پا سبک",
+          "dose": "۲ ست افزایشی",
+          "guideId": "seated-leg-press",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "tue-01",
+          "order": 1,
+          "name": "پرس سرشانه دستگاه",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰",
+          "guideId": "machine-shoulder-press"
+        },
+        {
+          "id": "tue-02",
+          "order": 2,
+          "name": "پرس پا دستگاه",
+          "sets": 4,
+          "reps": "۸–۱۲",
+          "restSec": "۱۵۰–۱۸۰",
+          "guideId": "seated-leg-press"
+        },
+        {
+          "id": "tue-03",
+          "order": 3,
+          "name": "نشر جانب دستگاه",
+          "sets": 3,
+          "reps": "۱۲–۲۰",
+          "restSec": "۷۵",
+          "guideId": "machine-lateral-raise"
+        },
+        {
+          "id": "tue-04",
+          "order": 4,
+          "name": "جلوپا دستگاه",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰",
+          "guideId": "leg-extension"
+        },
+        {
+          "id": "tue-05",
+          "order": 5,
+          "name": "پرس بالاسینه دستگاه",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۱۲۰",
+          "note": "مکمل؛ ۱ تا ۲ تکرار ذخیره",
+          "guideId": "incline-machine-chest-press"
+        },
+        {
+          "id": "tue-06",
+          "order": 6,
+          "name": "جلو بازو چکشی دمبل",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۷۵–۹۰",
+          "guideId": "dumbbell-hammer-curl"
+        },
+        {
+          "id": "tue-07",
+          "order": 7,
+          "name": "مچ سیمکش از زیر",
+          "sets": 2,
+          "reps": "۱۵–۲۰",
+          "restSec": "۶۰",
+          "attachment": "میله صاف کوتاه",
+          "guideId": "cable-wrist-curl"
+        },
+        {
+          "id": "tue-08",
+          "order": 8,
+          "name": "مچ سیمکش معکوس",
+          "sets": 2,
+          "reps": "۱۵–۲۰",
+          "restSec": "۶۰",
+          "attachment": "میله صاف کوتاه",
+          "guideId": "cable-reverse-wrist-curl"
+        },
+        {
+          "id": "tue-09",
+          "order": 9,
+          "name": "ریورس کرانچ",
+          "sets": 3,
+          "reps": "۱۲–۲۰",
+          "restSec": "۶۰",
+          "guideId": "reverse-crunch"
+        },
+        {
+          "id": "tue-10",
+          "order": 10,
+          "name": "پالوف پرس سیمکش",
+          "sets": 2,
+          "reps": "۱۰–۱۵ هر طرف",
+          "restSec": "۶۰",
+          "attachment": "دسته D تک‌دست",
+          "guideId": "cable-pallof-press"
+        }
+      ]
+    },
+    {
+      "id": "wed",
+      "dayFa": "چهارشنبه",
+      "type": "rest",
+      "title": "استراحت و ریکاوری",
+      "note": "فعالیت اختیاری: پیاده‌روی سبک یا کشش کوتاه. انجام‌ندادن این بخش هیچ خللی در برنامه اصلی ایجاد نمی‌کند."
+    },
+    {
+      "id": "thu",
+      "dayFa": "پنجشنبه",
+      "type": "training",
+      "title": "پشت‌پا + باسن + ساق + پشت‌بازو مکمل + شکم",
+      "estimatedMinutes": "۸۰ تا ۹۵ دقیقه",
+      "totalWorkingSets": 21,
+      "warmup": [
+        {
+          "id": "warm-cardio-thu",
+          "name": "هوازی سبک",
+          "dose": "۵ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-hip-hinge",
+          "name": "تمرین الگوی هیپ‌هینج بدون وزنه",
+          "dose": "۱۰ تکرار",
+          "guideId": "hip-hinge-drill",
+          "mediaRequired": true
+        },
+        {
+          "id": "warm-rdl",
+          "name": "ددلیفت رومانیایی سبک",
+          "dose": "۲ تا ۳ ست افزایشی",
+          "guideId": "dumbbell-rdl",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-leg-curl",
+          "name": "پشت‌پا دستگاه سبک",
+          "dose": "۱ ست",
+          "guideId": "lying-leg-curl",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "thu-01",
+          "order": 1,
+          "name": "ددلیفت رومانیایی دمبل",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۵۰–۱۸۰",
+          "note": "۱ تا ۲ تکرار ذخیره",
+          "guideId": "dumbbell-rdl"
+        },
+        {
+          "id": "thu-02",
+          "order": 2,
+          "name": "پشت‌پا دستگاه خوابیده",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰",
+          "guideId": "lying-leg-curl"
+        },
+        {
+          "id": "thu-03",
+          "order": 3,
+          "name": "پول‌ترو سیمکش",
+          "sets": 3,
+          "reps": "۱۲–۱۵",
+          "restSec": "۹۰",
+          "attachment": "طناب",
+          "guideId": "cable-pull-through"
+        },
+        {
+          "id": "thu-04",
+          "order": 4,
+          "name": "ساق نشسته",
+          "sets": 4,
+          "reps": "۱۲–۲۰",
+          "restSec": "۷۵",
+          "guideId": "seated-calf-raise"
+        },
+        {
+          "id": "thu-05",
+          "order": 5,
+          "name": "پشت‌بازو سیمکش تک‌دست بالای سر",
+          "sets": 2,
+          "reps": "۱۰–۱۵ هر دست",
+          "restSec": "۷۵",
+          "attachment": "دسته D تک‌دست",
+          "guideId": "single-arm-overhead-cable-triceps"
+        },
+        {
+          "id": "thu-06",
+          "order": 6,
+          "name": "پشت‌بازو سیمکش با میله صاف",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۷۵",
+          "attachment": "میله صاف کوتاه",
+          "guideId": "straight-bar-triceps-pushdown"
+        },
+        {
+          "id": "thu-07",
+          "order": 7,
+          "name": "کرانچ سیمکش",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۶۰–۷۵",
+          "attachment": "طناب",
+          "guideId": "cable-kneeling-crunch"
+        },
+        {
+          "id": "thu-08",
+          "order": 8,
+          "name": "وودچاپر سیمکش از بالا به پایین",
+          "sets": 2,
+          "reps": "۱۰–۱۵ هر طرف",
+          "restSec": "۶۰",
+          "attachment": "دسته D تک‌دست؛ طناب فقط در صورت راحت‌تر بودن",
+          "guideId": "high-to-low-cable-woodchopper"
+        }
+      ]
+    },
+    {
+      "id": "fri",
+      "dayFa": "جمعه",
+      "type": "training",
+      "title": "زیربغل + سرشانه کناری و خلفی + پاسچر + جلو بازو + چین‌تاک",
+      "estimatedMinutes": "۹۵ تا ۱۱۰ دقیقه",
+      "totalWorkingSets": 26,
+      "warmup": [
+        {
+          "id": "warm-cardio-fri",
+          "name": "هوازی یا روئینگ بسیار سبک",
+          "dose": "۵ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-wall-slide-fri",
+          "name": "وال‌اسلاید",
+          "dose": "۱ ست × ۱۰ تکرار",
+          "guideId": "wall-slide",
+          "mediaRequired": true
+        },
+        {
+          "id": "warm-external-rotation-fri",
+          "name": "چرخش خارجی شانه با سیمکش",
+          "dose": "۱ ست × ۱۲ هر دست",
+          "attachment": "دسته D تک‌دست؛ وزنه بسیار سبک",
+          "guideId": "cable-external-rotation",
+          "mediaRequired": true
+        },
+        {
+          "id": "warm-pulldown",
+          "name": "زیربغل سیمکش سبک",
+          "dose": "۱ تا ۲ ست افزایشی",
+          "guideId": "front-lat-pulldown",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "fri-01",
+          "order": 1,
+          "name": "زیربغل سیمکش از جلو",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰",
+          "attachment": "میله بلند لت؛ گیرش متوسط",
+          "guideId": "front-lat-pulldown"
+        },
+        {
+          "id": "fri-02",
+          "order": 2,
+          "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰",
+          "guideId": "chest-supported-h-row"
+        },
+        {
+          "id": "fri-03",
+          "order": 3,
+          "name": "پول‌اور سیمکش دست صاف با طناب",
+          "sets": 2,
+          "reps": "۱۲–۱۵",
+          "restSec": "۷۵–۹۰",
+          "attachment": "طناب",
+          "guideId": "straight-arm-rope-pulldown"
+        },
+        {
+          "id": "fri-04",
+          "order": 4,
+          "name": "نشر جانب سیمکش تک‌دست",
+          "sets": 3,
+          "reps": "۱۲–۲۰ هر دست",
+          "restSec": "۶۰",
+          "attachment": "کاف مچ؛ در نبود آن دسته D تک‌دست",
+          "guideId": "single-arm-cable-lateral-raise"
+        },
+        {
+          "id": "fri-05",
+          "order": 5,
+          "name": "فلای‌بک دستگاه",
+          "sets": 3,
+          "reps": "۱۲–۲۰",
+          "restSec": "۷۵",
+          "guideId": "reverse-pec-deck"
+        },
+        {
+          "id": "fri-06",
+          "order": 6,
+          "name": "فیس‌پول سیمکش",
+          "sets": 2,
+          "reps": "۱۵–۲۰",
+          "restSec": "۶۰–۷۵",
+          "attachment": "طناب",
+          "guideId": "cable-face-pull"
+        },
+        {
+          "id": "fri-07",
+          "order": 7,
+          "name": "نشر Y سیمکش",
+          "sets": 2,
+          "reps": "۱۲–۱۵",
+          "restSec": "۶۰",
+          "attachment": "دو دسته D یا دو کاف مچ",
+          "guideId": "cable-y-raise"
+        },
+        {
+          "id": "fri-08",
+          "order": 8,
+          "name": "جلو بازو لاری دستگاه",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۹۰",
+          "guideId": "machine-preacher-curl"
+        },
+        {
+          "id": "fri-09",
+          "order": 9,
+          "name": "جلو بازو دمبل تناوبی",
+          "sets": 3,
+          "reps": "۱۰–۱۲",
+          "restSec": "۹۰",
+          "guideId": "alternating-dumbbell-curl"
+        },
+        {
+          "id": "fri-10",
+          "order": 10,
+          "name": "جلو بازو معکوس سیمکش",
+          "sets": 2,
+          "reps": "۱۲–۱۵",
+          "restSec": "۷۵",
+          "attachment": "میله صاف کوتاه",
+          "guideId": "reverse-cable-curl"
+        },
+        {
+          "id": "fri-11",
+          "order": 11,
+          "name": "چین‌تاک کنار دیوار",
+          "sets": 2,
+          "reps": "۱۰ تکرار با مکث ۳ ثانیه",
+          "restSec": "۴۵",
+          "guideId": "wall-chin-tuck"
+        }
+      ]
+    }
+  ]
+}
